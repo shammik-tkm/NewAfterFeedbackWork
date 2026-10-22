@@ -747,33 +747,34 @@ passend lackiert.</p>
                     Kommen Sie vorbei oder <span class="text-brand-orange">schreiben Sie uns</span>
                 </h2>
                 <p class="text-brand-muted mt-3 sm:mt-4 text-sm sm:text-base">
-                    Bitte beachten Sie: Dieses Formular öffnet Ihr E-Mail-Programm. Alternativ können Sie uns direkt per WhatsApp kontaktieren.
+                    Bitte beachten Sie: Dieses Formular öffnet WhatsApp mit Ihrer vorbereiteten Anfrage.
                 </p>
             </div>
 
             <div class="grid lg:grid-cols-12 gap-5 sm:gap-7">
                 <div class="lg:col-span-7 bg-brand-card border border-brand-border rounded-2xl p-5 sm:p-6 md:p-8">
                     <h3 class="text-xl sm:text-2xl font-black italic uppercase mb-5 sm:mb-6">Anfrage vorbereiten</h3>
-                    <form id="contactForm" class="space-y-4">
+                    
+                    <form id="contactForm" class="space-y-4" onsubmit="sendToWhatsApp(event)">
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
                                 <label for="name" class="block text-xs font-bold text-slate-300 uppercase mb-2">Name *</label>
                                 <input id="name" name="name" required autocomplete="name"
-                                       class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
-                                       placeholder="Ihr Name">
+                                    class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
+                                    placeholder="Ihr Name">
                             </div>
                             <div>
                                 <label for="phone" class="block text-xs font-bold text-slate-300 uppercase mb-2">Telefon</label>
                                 <input id="phone" name="phone" type="tel" autocomplete="tel"
-                                       class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
-                                       placeholder="Ihre Telefonnummer">
+                                    class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
+                                    placeholder="Ihre Telefonnummer">
                             </div>
                         </div>
                         <div>
                             <label for="email" class="block text-xs font-bold text-slate-300 uppercase mb-2">E-Mail *</label>
                             <input id="email" name="email" type="email" required autocomplete="email"
-                                   class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
-                                   placeholder="Ihre E-Mail-Adresse">
+                                class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
+                                placeholder="Ihre E-Mail-Adresse">
                         </div>
                         <div>
                             <label for="service" class="block text-xs font-bold text-slate-300 uppercase mb-2">Worum geht es?</label>
@@ -790,22 +791,25 @@ passend lackiert.</p>
                         <div>
                             <label for="message" class="block text-xs font-bold text-slate-300 uppercase mb-2">Ihre Nachricht *</label>
                             <textarea id="message" name="message" required rows="4"
-                                      class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
-                                      placeholder="Beschreiben Sie den Schaden ..."></textarea>
+                                    class="w-full px-4 py-3 bg-[#08090c] border border-brand-border rounded-xl focus:outline-none focus:border-brand-orange text-sm sm:text-base"
+                                    placeholder="Beschreiben Sie den Schaden ..."></textarea>
                         </div>
-                        <p class="text-xs text-brand-muted">Fotos können Sie nach dem Öffnen Ihres E-Mail-Programms als Anhang hinzufügen.</p>
-                        <button type="submit"
-                                class="w-full py-3.5 sm:py-4 rounded-xl btn-orange-glow font-black uppercase tracking-wider text-sm sm:text-base">
-                            <i class="fas fa-envelope mr-2"></i>E-Mail-Anfrage vorbereiten →
+                        
+                        <p class="text-xs text-brand-muted">Fotos können Sie nach dem Öffnen von WhatsApp als Anhang hinzufügen.</p>
+
+                        <!-- Оранжевая кнопка отправки формы -->
+                        <!-- Добавьте кнопку под текстовым полем message -->
+                        <button id="whatsapp-submit-btn" type="button" 
+                                class="w-full py-3.5 px-6 bg-brand-orange hover:bg-opacity-90 text-white font-bold rounded-xl transition duration-200 flex items-center justify-center gap-2 mt-4">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99 0-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                            </svg>
+                            Per WhatsApp anfragen
                         </button>
-                        <a href="https://wa.me/491729039100?text=Hallo%20CARZONA%2C%20ich%20m%C3%B6chte%20eine%20Reparatur%20anfragen."
-                           target="_blank" rel="noopener noreferrer"
-                           class="block w-full py-3.5 sm:py-4 rounded-xl border border-brand-border text-center font-bold hover:border-brand-orange text-sm sm:text-base">
-                            Stattdessen WhatsApp verwenden
-                        </a>
                     </form>
                 </div>
 
+                <!-- Правая колонка с контактами -->
                 <aside class="lg:col-span-5 space-y-3 sm:space-y-4">
                     <div class="p-4 sm:p-5 rounded-2xl bg-brand-card border border-brand-border flex gap-3 sm:gap-4">
                         <i class="fas fa-location-dot text-brand-orange text-lg sm:text-xl mt-0.5"></i>
@@ -813,14 +817,14 @@ passend lackiert.</p>
                             <span class="text-xs font-bold text-brand-muted uppercase">Adresse</span>
                             <p class="font-bold mt-1 text-sm sm:text-base">Scharnhorststr. 2, 41460 Neuss</p>
                             <a class="text-brand-orange text-xs sm:text-sm underline mt-2 inline-block"
-                               href="https://maps.google.com/?q=Scharnhorststr.+2,+41460+Neuss"
-                               target="_blank" rel="noopener noreferrer">
+                            href="https://maps.google.com/?q=Scharnhorststr.+2,+41460+Neuss"
+                            target="_blank" rel="noopener noreferrer">
                                 Route in Google Maps öffnen
                             </a>
                         </div>
                     </div>
                     <a href="tel:+491729039100"
-                       class="p-4 sm:p-5 rounded-2xl bg-brand-card border border-brand-border flex gap-3 sm:gap-4 hover:border-brand-orange">
+                    class="p-4 sm:p-5 rounded-2xl bg-brand-card border border-brand-border flex gap-3 sm:gap-4 hover:border-brand-orange">
                         <i class="fas fa-phone text-brand-orange text-lg sm:text-xl mt-0.5"></i>
                         <div>
                             <span class="text-xs font-bold text-brand-muted uppercase">Telefon und WhatsApp</span>
@@ -828,7 +832,7 @@ passend lackiert.</p>
                         </div>
                     </a>
                     <a href="mailto:adbworkteam@gmail.com"
-                       class="p-4 sm:p-5 rounded-2xl bg-brand-card border border-brand-border flex gap-3 sm:gap-4 hover:border-brand-orange">
+                    class="p-4 sm:p-5 rounded-2xl bg-brand-card border border-brand-border flex gap-3 sm:gap-4 hover:border-brand-orange">
                         <i class="fas fa-envelope text-brand-orange text-lg sm:text-xl mt-0.5"></i>
                         <div>
                             <span class="text-xs font-bold text-brand-muted uppercase">E-Mail</span>
@@ -877,7 +881,8 @@ passend lackiert.</p>
     <script src="./js/before_after_slider.js"></script>
     <script src="./js/faq_accordion.js"></script>
     <script src="./js/contact_form.js"></script>
-    <script src="./animations.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/send_mail.js"></script>
 
 </body>
 </html>
