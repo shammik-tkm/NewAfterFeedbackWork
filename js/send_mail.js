@@ -17,11 +17,11 @@ document.getElementById('whatsapp-submit-btn').addEventListener('click', functio
     // Собираем текст сообщения с эмодзи и переносами строк (\n)
     let text = `Hallo CARZONA! 👋\n\n`;
     text += `Ich möchte eine Anfrage stellen:\n`;
-    text += `Name: ${name}\n`;
-    if (phone) text += `Telefon: ${phone}\n`;
-    text += `E-Mail: ${email}\n`;
-    text += `Leistung: ${service}\n`;
-    text += `Nachricht: ${message}`;
+    text += `👤 Name: ${name}\n`;
+    if (phone) text += `📞 Telefon: ${phone}\n`;
+    text += `✉️ E-Mail: ${email}\n`;
+    text += `🛠️ Leistung: ${service}\n`;
+    text += `📝 Nachricht: ${message}`;
 
     // Кодируем текст для безопасности передачи в URL
     const encodedText = encodeURIComponent(text);

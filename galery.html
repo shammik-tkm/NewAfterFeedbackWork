@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#08090c">
+    <meta name="description" content="CARZONA Galerie in Neuss: Vorher-Nachher Ergebnisse von Smart Repair, Lackierung, Felgenaufbereitung und Karosseriearbeiten.">
+    <title>CARZONA – Vorher / Nachher Galerie | Neuss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#ff5500',
+                            orangeHover: '#ff7700',
+                            dark: '#08090c',
+                            card: '#12141c',
+                            border: '#232736',
+                            muted: '#8e96a7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-brand-dark text-white antialiased selection:bg-brand-orange selection:text-white">
+
+<div id="scrollBar"></div>
+
+<!-- HEADER / NAVIGATION -->
+<header class="fixed top-0 inset-x-0 z-50 bg-[#08090c]/95 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[72px] flex items-center justify-between gap-3">
+        
+        <!-- Logo -->
+        <a href="./index.html" class="flex items-center shrink-0" aria-label="CARZONA Startseite">
+            <div class="leading-none">
+                <div class="text-xl sm:text-2xl font-black italic tracking-wider">
+                    <span class="text-brand-orange">CAR</span><span class="text-white">ZONA</span>
+                </div>
+                <div class="text-[8px] sm:text-[9px] uppercase font-bold tracking-[0.15em] text-slate-400 mt-0.5">
+                    Lack & Smart Repair
+                </div>
+            </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav id="desktopNav" class="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-bold">
+            <a href="./index.html#start" class="nav-link hover:text-brand-orange transition">Startseite</a>
+            <a href="./index.html#leistungen" class="nav-link hover:text-brand-orange transition">Leistungen</a>
+            <a href="./galery.html" class="nav-link text-brand-orange">Galerie</a>
+            <a href="./index.html#ablauf" class="nav-link hover:text-brand-orange transition">Ablauf</a>
+            <a href="./index.html#faq" class="nav-link hover:text-brand-orange transition">FAQ</a>
+            <a href="./index.html#bewertungen" class="nav-link hover:text-brand-orange transition">Bewertungen</a>
+            <a href="./index.html#kontakt" class="nav-link hover:text-brand-orange transition">Kontakt</a>
+        </nav>
+
+        <div class="flex items-center gap-2 shrink-0">
+            <a href="https://wa.me/491729039100?text=Hallo%20CARZONA%2C%20ich%20habe%20eine%20Anfrage%20zu%20einer%20Reparatur."
+               target="_blank" rel="noopener noreferrer"
+               class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full border-2 border-brand-orange font-bold text-sm hover:bg-brand-orange transition">
+                <i class="fab fa-whatsapp text-base"></i> WhatsApp
+            </a>
+
+            <!-- Mobile Burger Toggle -->
+            <button id="menuToggle"
+                    class="lg:hidden w-11 h-11 rounded-xl border border-brand-border bg-brand-card flex items-center justify-center text-white hover:border-brand-orange hover:text-brand-orange transition"
+                    aria-label="Menü öffnen" aria-expanded="false">
+                <i class="fas fa-bars text-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobileNav" class="hidden lg:hidden px-4 pb-4 bg-[#08090c] border-t border-brand-border">
+        <div class="flex flex-col gap-1 font-bold text-sm">
+            <a class="py-3 hover:text-brand-orange" href="./index.html#start">Startseite</a>
+            <a class="py-3 hover:text-brand-orange" href="./index.html#leistungen">Leistungen</a>
+            <a class="py-3 text-brand-orange" href="./galery.html">Galerie</a>
+            <a class="py-3 hover:text-brand-orange" href="./index.html#ablauf">Ablauf</a>
+            <a class="py-3 hover:text-brand-orange" href="./index.html#faq">FAQ</a>
+            <a class="py-3 hover:text-brand-orange" href="./index.html#bewertungen">Bewertungen</a>
+            <a class="py-3 hover:text-brand-orange" href="./index.html#kontakt">Kontakt</a>
+            <a class="py-3 text-brand-orange flex items-center gap-2" href="https://wa.me/491729039100" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Per WhatsApp kontaktieren
+            </a>
+        </div>
+    </nav>
+</header>
+
+<main class="pt-28 pb-20">
+    
+    <!-- PAGE TITLE SECTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-12">
+        <div class="text-center max-w-3xl mx-auto">
+            <p class="text-brand-orange font-extrabold uppercase tracking-[.2em] text-xs mb-3">
+                Ergebnisse unserer Werkstatt
+            </p>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black italic uppercase tracking-tight mb-4">
+                Vorher / Nachher <span class="text-brand-orange">Galerie</span>
+            </h1>
+            <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
+                Ziehen Sie den Schieberegler auf den Bildern, um das Ergebnis unserer Präzisionslackierung, Smart Repair und Fahrzeugaufbereitung in Neuss zu vergleichen.
+            </p>
+        </div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3" id="galleryFilters">
+            <button onclick="filterCategory('all', this)" class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-brand-orange bg-brand-orange text-white transition duration-200">
+                Alle Arbeiten
+            </button>
+            <button onclick="filterCategory('smart-repair', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-brand-border bg-brand-card hover:border-brand-orange text-slate-300 hover:text-white transition duration-200">
+                Smart Repair
+            </button>
+            <button onclick="filterCategory('lackierung', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-brand-border bg-brand-card hover:border-brand-orange text-slate-300 hover:text-white transition duration-200">
+                Lackierung
+            </button>
+            <button onclick="filterCategory('felgen', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-brand-border bg-brand-card hover:border-brand-orange text-slate-300 hover:text-white transition duration-200">
+                Felgen
+            </button>
+            <button onclick="filterCategory('aufbereitung', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold border border-brand-border bg-brand-card hover:border-brand-orange text-slate-300 hover:text-white transition duration-200">
+                Aufbereitung
+            </button>
+        </div>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="galleryGrid">
+
+            <!-- Card 1: Mazda 3 -->
+            <div class="gallery-card bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition duration-300 hover:border-brand-orange/50" data-category="smart-repair">
+                <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                    <img src="./images/no_number_car/MAZDA3 After no number.jpg" alt="Mazda 3 Nachher" class="absolute inset-0 w-full h-full object-cover" />
+                    <span class="absolute top-3 right-3 z-10 bg-black/70 text-white text-[10px] font-bold px-2.5 py-1 rounded backdrop-blur-sm border border-white/10">NACHHER</span>
+
+                    <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                        <img src="./images/no_number_car/MAZDA 3 Before no number.jpg" alt="Mazda 3 Vorher" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                        <span class="absolute top-3 left-3 z-10 bg-brand-orange text-white text-[10px] font-black px-2.5 py-1 rounded">VORHER</span>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                    <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                            &#10094;&#10095;
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 bg-brand-card">
+                    <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Smart Repair</span>
+                    <h3 class="font-bold text-white text-base">Mazda 3 — Seitenwand</h3>
+                    <p class="text-brand-muted text-xs mt-1">Beseitigung von Kratzern und Dellen mit perfekter Farbanpassung.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Mercedes-Benz -->
+            <div class="gallery-card bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition duration-300 hover:border-brand-orange/50" data-category="lackierung">
+                <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                    <img src="./images/no_number_car/no number after.jpg" alt="Mercedes Nachher" class="absolute inset-0 w-full h-full object-cover" />
+                    <span class="absolute top-3 right-3 z-10 bg-black/70 text-white text-[10px] font-bold px-2.5 py-1 rounded backdrop-blur-sm border border-white/10">NACHHER</span>
+
+                    <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                        <img src="./images/work_picture/Mercedes Bervor 2.jpeg" alt="Mercedes Vorher" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                        <span class="absolute top-3 left-3 z-10 bg-brand-orange text-white text-[10px] font-black px-2.5 py-1 rounded">VORHER</span>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                    <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                            &#10094;&#10095;
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 bg-brand-card">
+                    <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Lackierung & Politur</span>
+                    <h3 class="font-bold text-white text-base">Mercedes-Benz — Heckstoßfänger</h3>
+                    <p class="text-brand-muted text-xs mt-1">Komplette Neulackierung des Stoßfängers nach Parkschaden.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Alufelgen -->
+            <div class="gallery-card bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition duration-300 hover:border-brand-orange/50" data-category="felgen">
+                <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                    <img src="./images/work_picture/Felge After 1.jpeg" alt="Felge Nachher" class="absolute inset-0 w-full h-full object-cover" />
+                    <span class="absolute top-3 right-3 z-10 bg-black/70 text-white text-[10px] font-bold px-2.5 py-1 rounded backdrop-blur-sm border border-white/10">NACHHER</span>
+
+                    <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                        <img src="./images/work_picture/Felge Befor.jpeg" alt="Felge Vorher" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                        <span class="absolute top-3 left-3 z-10 bg-brand-orange text-white text-[10px] font-black px-2.5 py-1 rounded">VORHER</span>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                    <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                            &#10094;&#10095;
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 bg-brand-card">
+                    <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Felgenaufbereitung</span>
+                    <h3 class="font-bold text-white text-base">Alufelgen — Silber Metallic</h3>
+                    <p class="text-brand-muted text-xs mt-1">Bordsteinschaden entfernt und neu beschichtet.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Mitsubishi -->
+            <div class="gallery-card bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition duration-300 hover:border-brand-orange/50" data-category="lackierung">
+                <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                    <img src="./images/work_picture/Mitshubisi After.jpeg" alt="Mitsubishi Nachher" class="absolute inset-0 w-full h-full object-cover" />
+                    <span class="absolute top-3 right-3 z-10 bg-black/70 text-white text-[10px] font-bold px-2.5 py-1 rounded backdrop-blur-sm border border-white/10">NACHHER</span>
+
+                    <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                        <img src="./images/work_picture/Mitshubisi Befor 1.jpeg" alt="Mitsubishi Vorher" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                        <span class="absolute top-3 left-3 z-10 bg-brand-orange text-white text-[10px] font-black px-2.5 py-1 rounded">VORHER</span>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                    <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                            &#10094;&#10095;
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 bg-brand-card">
+                    <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Instandsetzung</span>
+                    <h3 class="font-bold text-white text-base">Mitsubishi — Motorhaube</h3>
+                    <p class="text-brand-muted text-xs mt-1">Ausbeulen, Grundieren und Klarlackierung.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Range Rover -->
+            <div class="gallery-card bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition duration-300 hover:border-brand-orange/50" data-category="smart-repair">
+                <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                    <img src="./images/work_picture/Range After.jpeg" alt="Range Rover Nachher" class="absolute inset-0 w-full h-full object-cover" />
+                    <span class="absolute top-3 right-3 z-10 bg-black/70 text-white text-[10px] font-bold px-2.5 py-1 rounded backdrop-blur-sm border border-white/10">NACHHER</span>
+
+                    <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                        <img src="./images/work_picture/Range Befor 2.jpeg" alt="Range Rover Vorher" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                        <span class="absolute top-3 left-3 z-10 bg-brand-orange text-white text-[10px] font-black px-2.5 py-1 rounded">VORHER</span>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                    <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                            &#10094;&#10095;
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 bg-brand-card">
+                    <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Teillackierung</span>
+                    <h3 class="font-bold text-white text-base">Range Rover — Stoßfänger Rot</h3>
+                    <p class="text-brand-muted text-xs mt-1">Punktgenaue Lackierung ohne Farbunterschied.</p>
+                </div>
+            </div>
+
+            <!-- Card 6: Smart -->
+            <div class="gallery-card bg-brand-card rounded-2xl border border-brand-border overflow-hidden transition duration-300 hover:border-brand-orange/50" data-category="aufbereitung">
+                <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                    <img src="./images/work_picture/Smart After 3.jpeg" alt="Smart Nachher" class="absolute inset-0 w-full h-full object-cover" />
+                    <span class="absolute top-3 right-3 z-10 bg-black/70 text-white text-[10px] font-bold px-2.5 py-1 rounded backdrop-blur-sm border border-white/10">NACHHER</span>
+
+                    <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                        <img src="./images/work_picture/Smart befor.jpeg" alt="Smart Vorher" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                        <span class="absolute top-3 left-3 z-10 bg-brand-orange text-white text-[10px] font-black px-2.5 py-1 rounded">VORHER</span>
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                    <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                        <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                            &#10094;&#10095;
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 bg-brand-card">
+                    <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Smart Repair & Politur</span>
+                    <h3 class="font-bold text-white text-base">Smart — Frontbereich</h3>
+                    <p class="text-brand-muted text-xs mt-1">Glanzwiederherstellung und Beseitigung von Kratzern.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 sm:mt-20">
+        <div class="bg-gradient-to-r from-brand-card via-[#181b26] to-brand-card border border-brand-border rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <h2 class="text-2xl sm:text-4xl font-black italic uppercase mb-4">
+                    Haben Sie einen ähnlichen <span class="text-brand-orange">Schaden?</span>
+                </h2>
+                <p class="text-brand-muted text-sm sm:text-base mb-6">
+                    Senden Sie uns einfach ein Foto Ihres Fahrzeugs per WhatsApp. Wir schätzen den Schaden ein und nennen Ihnen einen fairen Preis.
+                </p>
+                <a href="https://wa.me/491729039100?text=Hallo%20CARZONA%2C%20ich%20m%C3%B6chte%20eine%20Einsch%C3%A4tzung%20f%C3%BCr%20meinen%20Schaden."
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn-orange-glow inline-flex items-center gap-2.5 px-7 py-4 rounded-xl font-extrabold text-sm sm:text-base text-white">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    Foto per WhatsApp senden
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="py-6 sm:py-8 bg-[#040507] border-t border-brand-border text-xs text-brand-muted">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+        <p>
+            <span class="font-black italic text-brand-orange">CARZONA</span> © <span id="year">2026</span> Lack & Smart Repair Neuss.
+        </p>
+        <div class="flex gap-4 sm:gap-5">
+            <a href="./index.html#leistungen" class="hover:text-brand-orange transition">Leistungen</a>
+            <a href="./index.html#kontakt" class="hover:text-brand-orange transition">Kontakt</a>
+            <a href="https://wa.me/491729039100" target="_blank" rel="noopener noreferrer" class="hover:text-brand-orange transition">WhatsApp</a>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a id="fabWhatsapp" class="fab fixed bottom-5 right-5 z-40 w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition" 
+   href="https://wa.me/491729039100?text=Hallo%20CARZONA%2C%20ich%20habe%20eine%20Anfrage." 
+   target="_blank" rel="noopener noreferrer" aria-label="WhatsApp öffnen">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- JAVASCRIPT FOR SLIDER AND FILTER -->
+<script>
+    // Slider Drag Functionality
+    function moveSlider(input) {
+        const value = input.value;
+        const container = input.closest('.before-after-container');
+        const beforeImg = container.querySelector('.before-image');
+        const sliderLine = container.querySelector('.slider-line');
+
+        beforeImg.style.width = `${value}%`;
+        sliderLine.style.left = `${value}%`;
+    }
+
+    // Category Filter Functionality
+    function filterCategory(category, button) {
+        // Update active button UI
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            btn.classList.remove('bg-brand-orange', 'border-brand-orange', 'text-white', 'active');
+            btn.classList.add('bg-brand-card', 'border-brand-border', 'text-slate-300');
+        });
+
+        button.classList.remove('bg-brand-card', 'border-brand-border', 'text-slate-300');
+        button.classList.add('bg-brand-orange', 'border-brand-orange', 'text-white', 'active');
+
+        // Filter cards
+        const cards = document.querySelectorAll('.gallery-card');
+        cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+<script src="./js/mobile_menu.js"></script>
+<script src="./js/before-after.js"></script>
+
+</body>
+</html>

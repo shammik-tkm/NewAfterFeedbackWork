@@ -566,76 +566,174 @@ passend lackiert.</p>
     <!-- GALERIE -->
     <section id="galerie" class="py-14 sm:py-20 bg-[#0b0c10] border-b border-brand-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-10 sm:mb-12">
-                <p class="text-brand-orange font-extrabold uppercase tracking-widest text-xs mb-3">Unsere Arbeiten</p>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black italic uppercase tracking-tight">
-                    Galerie & <span class="text-brand-orange">Projekte</span>
-                </h2>
-                <p class="text-brand-muted mt-3 max-w-2xl text-sm sm:text-base">
-                    Ein Einblick in unsere tägliche Arbeit: Präzisionslackierungen, Smart Repair und professionelle Aufbereitungen.
-                </p>
+            <!-- Заголовок -->
+            <div class="mb-8 sm:mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                <div>
+                    <p class="text-brand-orange font-extrabold uppercase tracking-widest text-xs mb-3">Unsere Arbeiten</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black italic uppercase tracking-tight text-white">
+                        Galerie & <span class="text-brand-orange">Projekte</span>
+                    </h2>
+                    <p class="text-brand-muted mt-3 max-w-2xl text-sm sm:text-base">
+                        Vorher-Nachher Vergleich: Präzisionslackierungen, Smart Repair und professionelle Aufbereitungen.
+                    </p>
+                </div>
+                
+                <!-- Подсказка о скролле -->
+                <div class="hidden sm:flex items-center gap-2 text-brand-muted text-xs font-semibold uppercase tracking-wider">
+                    <a href="./galery.html" class="hover:text-brand-orange">Wischen zum Erkunden</a>
+                    <svg class="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </div>
             </div>
 
-            <!-- Сетка галереи -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            <!-- Карусель / Скролл в одну линию -->
+            <div class="flex overflow-x-auto gap-4 sm:gap-6 pb-6 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-brand-orange scrollbar-track-brand-card">
                 
-                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-brand-card border border-brand-border">
-                    <img src="./images/no_number_car/MAZDA3 After no number.jpg" alt="Mazda 3 Lackierung" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <div>
-                            <span class="text-brand-orange text-xs font-black uppercase">Smart Repair</span>
-                            <h3 class="font-bold text-white text-base">Mazda 3 — Seitenwand</h3>
+                <!-- Карточка 1: Mazda 3 -->
+                <div class="flex-none w-[85vw] sm:w-[380px] md:w-[420px] snap-start bg-brand-card rounded-2xl border border-brand-border overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                        <!-- Фото После (Background/After) -->
+                        <img src="./images/no_number_car/MAZDA3 After no number.jpg" alt="Mazda 3 After" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-3 right-3 z-10 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm">NACHHER</span>
+
+                        <!-- Фото До (Foreground/Before) -->
+                        <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                            <img src="./images/no_number_car/MAZDA 3 Before no number.jpg" alt="Mazda 3 Before" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                            <span class="absolute top-3 left-3 z-10 bg-brand-orange/90 text-black text-[10px] font-extrabold px-2 py-1 rounded">VORHER</span>
                         </div>
+
+                        <!-- Слайдер-разделитель -->
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                        <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                                &#10094;&#10095;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#0b0c10]">
+                        <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Smart Repair</span>
+                        <h3 class="font-bold text-white text-base">Mazda 3 — Seitenwand</h3>
                     </div>
                 </div>
 
-                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-brand-card border border-brand-border">
-                    <img src="./images/no_number_car/no number after.jpg" alt="Mercedes Stoßfänger Lackierung" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <div>
-                            <span class="text-brand-orange text-xs font-black uppercase">Lackierung & Politur</span>
-                            <h3 class="font-bold text-white text-base">Mercedes-Benz — Heckstoßfänger</h3>
+                <!-- Карточка 2: Mercedes-Benz -->
+                <div class="flex-none w-[85vw] sm:w-[380px] md:w-[420px] snap-start bg-brand-card rounded-2xl border border-brand-border overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                        <img src="./images/no_number_car/no number after.jpg" alt="Mercedes After" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-3 right-3 z-10 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm">NACHHER</span>
+
+                        <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                            <img src="./images/work_picture/Mercedes Bervor 2.jpeg" alt="Mercedes Before" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                            <span class="absolute top-3 left-3 z-10 bg-brand-orange/90 text-black text-[10px] font-extrabold px-2 py-1 rounded">VORHER</span>
                         </div>
+
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                        <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                                &#10094;&#10095;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#0b0c10]">
+                        <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Lackierung & Politur</span>
+                        <h3 class="font-bold text-white text-base">Mercedes-Benz — Heckstoßfänger</h3>
                     </div>
                 </div>
 
-                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-brand-card border border-brand-border">
-                    <img src="./images/work_picture/Felge After 1.jpeg" alt="Felgenaufbereitung und Lackierung" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <div>
-                            <span class="text-brand-orange text-xs font-black uppercase">Felgenaufbereitung</span>
-                            <h3 class="font-bold text-white text-base">Alufelgen — Silber Metallic</h3>
+                <!-- Карточка 3: Alufelgen -->
+                <div class="flex-none w-[85vw] sm:w-[380px] md:w-[420px] snap-start bg-brand-card rounded-2xl border border-brand-border overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                        <img src="./images/work_picture/Felge After 1.jpeg" alt="Felge After" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-3 right-3 z-10 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm">NACHHER</span>
+
+                        <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                            <img src="./images/work_picture/Felge Befor.jpeg" alt="Felge Before" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                            <span class="absolute top-3 left-3 z-10 bg-brand-orange/90 text-black text-[10px] font-extrabold px-2 py-1 rounded">VORHER</span>
                         </div>
+
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                        <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                                &#10094;&#10095;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#0b0c10]">
+                        <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Felgenaufbereitung</span>
+                        <h3 class="font-bold text-white text-base">Alufelgen — Silber Metallic</h3>
                     </div>
                 </div>
 
-                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-brand-card border border-brand-border">
-                    <img src="./images/work_picture/Mitshubisi After.jpeg" alt="Vorbereitung Motorhaube" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <div>
-                            <span class="text-brand-orange text-xs font-black uppercase">Vorbereitung & Instandsetzung</span>
-                            <h3 class="font-bold text-white text-base">Mitsubishi — Motorhaube</h3>
+                <!-- Карточка 4: Mitsubishi -->
+                <div class="flex-none w-[85vw] sm:w-[380px] md:w-[420px] snap-start bg-brand-card rounded-2xl border border-brand-border overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                        <img src="./images/work_picture/Mitshubisi After.jpeg" alt="Mitsubishi After" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-3 right-3 z-10 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm">NACHHER</span>
+
+                        <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                            <img src="./images/work_picture/Mitshubisi Befor 1.jpeg" alt="Mitsubishi Before" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                            <span class="absolute top-3 left-3 z-10 bg-brand-orange/90 text-black text-[10px] font-extrabold px-2 py-1 rounded">VORHER</span>
                         </div>
+
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                        <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                                &#10094;&#10095;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#0b0c10]">
+                        <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Vorbereitung & Instandsetzung</span>
+                        <h3 class="font-bold text-white text-base">Mitsubishi — Motorhaube</h3>
                     </div>
                 </div>
 
-                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-brand-card border border-brand-border">
-                    <img src="./images/work_picture/Range After.jpeg" alt="Range Rover Stoßfänger Lackierung" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <div>
-                            <span class="text-brand-orange text-xs font-black uppercase">Teillackierung</span>
-                            <h3 class="font-bold text-white text-base">Range Rover — Stoßfänger Rot</h3>
+                <!-- Карточка 5: Range Rover -->
+                <div class="flex-none w-[85vw] sm:w-[380px] md:w-[420px] snap-start bg-brand-card rounded-2xl border border-brand-border overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                        <img src="./images/work_picture/Range After.jpeg" alt="Range Rover After" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-3 right-3 z-10 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm">NACHHER</span>
+
+                        <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                            <img src="./images/work_picture/Range Befor 2.jpeg" alt="Range Rover Before" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                            <span class="absolute top-3 left-3 z-10 bg-brand-orange/90 text-black text-[10px] font-extrabold px-2 py-1 rounded">VORHER</span>
                         </div>
+
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                        <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                                &#10094;&#10095;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#0b0c10]">
+                        <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Teillackierung</span>
+                        <h3 class="font-bold text-white text-base">Range Rover — Stoßfänger Rot</h3>
                     </div>
                 </div>
 
-                <div class="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-brand-card border border-brand-border">
-                    <img src="./images/work_picture/Smart After 3.jpeg" alt="Smart Smart Repair" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <div>
-                            <span class="text-brand-orange text-xs font-black uppercase">Smart Repair & Aufbereitung</span>
-                            <h3 class="font-bold text-white text-base">Smart — Frontbereich</h3>
+                <!-- Карточка 6: Smart -->
+                <div class="flex-none w-[85vw] sm:w-[380px] md:w-[420px] snap-start bg-brand-card rounded-2xl border border-brand-border overflow-hidden group">
+                    <div class="relative aspect-[4/3] w-full overflow-hidden select-none before-after-container">
+                        <img src="./images/work_picture/Smart After 3.jpeg" alt="Smart After" class="absolute inset-0 w-full h-full object-cover" />
+                        <span class="absolute top-3 right-3 z-10 bg-black/60 text-white text-[10px] font-bold px-2 py-1 rounded backdrop-blur-sm">NACHHER</span>
+
+                        <div class="before-image absolute inset-y-0 left-0 overflow-hidden w-1/2 z-10">
+                            <img src="./images/work_picture/Smart befor.jpeg" alt="Smart Before" class="absolute inset-0 w-full h-full object-cover max-w-none w-full-container" />
+                            <span class="absolute top-3 left-3 z-10 bg-brand-orange/90 text-black text-[10px] font-extrabold px-2 py-1 rounded">VORHER</span>
                         </div>
+
+                        <input type="range" min="0" max="100" value="50" class="slider-input absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" oninput="moveSlider(this)" />
+                        <div class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-brand-orange z-20 pointer-events-none -translate-x-1/2">
+                            <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-brand-orange rounded-full flex items-center justify-center shadow-lg text-black font-bold text-xs">
+                                &#10094;&#10095;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#0b0c10]">
+                        <span class="text-brand-orange text-xs font-black uppercase tracking-wider block mb-1">Smart Repair & Aufbereitung</span>
+                        <h3 class="font-bold text-white text-base">Smart — Frontbereich</h3>
                     </div>
                 </div>
 
@@ -883,6 +981,7 @@ passend lackiert.</p>
     <script src="./js/contact_form.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/send_mail.js"></script>
+    <script src="./js/before-after.js"></script>
 
 </body>
 </html>
